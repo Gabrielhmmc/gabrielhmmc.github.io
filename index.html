@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Controle Ambulatorial
+</title>
+
+<link rel="stylesheet"
+href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>
+
+🏥 Controle Ambulatorial
+
+</h1>
+
+<button id="tema">
+
+🌙
+
+</button>
+
+</header>
+
+<section class="dashboard">
+
+<div class="card">
+
+<h2 id="totalPacientes">
+
+0
+
+</h2>
+
+<p>Internados</p>
+
+</div>
+
+<div class="card verde">
+
+<h2 id="emdia">
+
+0
+
+</h2>
+
+<p>Em Dia</p>
+
+</div>
+
+<div class="card amarelo">
+
+<h2 id="proximos">
+
+0
+
+</h2>
+
+<p>Próximos</p>
+
+</div>
+
+<div class="card vermelho">
+
+<h2 id="atrasados">
+
+0
+
+</h2>
+
+<p>Atrasados</p>
+
+</div>
+
+</section>
+
+<section class="cadastro">
+
+<h2>
+
+Cadastrar Paciente
+
+</h2>
+
+<form id="formPaciente">
+
+<input
+id="nome"
+placeholder="Nome">
+
+<input
+id="idade"
+type="number"
+placeholder="Idade">
+
+<input
+id="prontuario"
+placeholder="Prontuário">
+
+<input
+id="leito"
+placeholder="Leito">
+
+<input
+id="medico"
+placeholder="Médico Responsável">
+
+<input
+id="clinica"
+placeholder="Clínica">
+
+<textarea
+id="hipotese"
+placeholder="Hipótese Diagnóstica">
+</textarea>
+
+<textarea
+id="condutas"
+placeholder="Condutas">
+</textarea>
+
+<textarea
+id="observacoes"
+placeholder="Observações">
+</textarea>
+
+<label>
+
+Última Reavaliação
+
+</label>
+
+<input
+type="datetime-local"
+id="ultima">
+
+<label>
+
+Intervalo
+
+</label>
+
+<select id="intervalo">
+
+<option value="6">
+6 horas
+</option>
+
+<option value="12">
+12 horas
+</option>
+
+<option value="24">
+24 horas
+</option>
+
+<option value="48">
+48 horas
+</option>
+
+</select>
+
+<button>
+
+Salvar Paciente
+
+</button>
+
+</form>
+
+</section>
+
+<section>
+
+<input
+id="pesquisa"
+placeholder="Pesquisar paciente...">
+
+</section>
+
+<section class="tabela">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Leito</th>
+
+<th>Paciente</th>
+
+<th>Idade</th>
+
+<th>Prontuário</th>
+
+<th>Médico</th>
+
+<th>Próxima</th>
+
+<th>Status</th>
+
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listaPacientes">
+
+</tbody>
+
+</table>
+
+</section>
+
+<script type="module" src="js/storage.js"></script>
+<script type="module" src="js/app.js"></script>
+<script src="js/reavaliacao.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/historico.js"></script>
+<script src="js/exportar.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
